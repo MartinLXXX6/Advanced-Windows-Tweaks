@@ -9,6 +9,10 @@ UI Changer Page:
 ![UI Changer Page](https://github.com/user-attachments/assets/3ca979db-a53d-41ac-9e11-1e3ac336b13e)
 
 
+# Requirements
+1. Microsoft Windows
+
+
 # How to Download & Run
 1. Go to the Realeses page and downlaod the latest "Advanced.Windows.Tweaks.zip" zip file.
 2. Extract it.
