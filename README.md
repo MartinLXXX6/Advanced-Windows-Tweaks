@@ -20,4 +20,5 @@ UI Changer Page:
 
 
 # About this app
-The main script is a Batch File (Advanced Windows Tweaker.bat) and cosists in selecting the desired tweaks found on the assets folder as a Registry Entry (.reg) or a Batch File (.bat). However, some tweaks are found on the main Batch File that run on some cases. Remember that you can view the code at any time just by right clicking on a .bat or .reg files and selecting the option "Edit".
+The main script is a Batch File (Advanced Windows Tweaker.bat) and cosists in selecting the desired tweak found on the assets folder as a Registry Entry (.reg) or a Batch File (.bat).
+Remember that you can view the code at any time just by right clicking on a .bat or .reg files and selecting the option "Edit".
