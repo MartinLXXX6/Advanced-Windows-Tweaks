@@ -10,7 +10,7 @@ UI Changer Page:
 
 
 # Requirements
-1. Microsoft Windows
+1. Any Windows OS
 
 
 # How to Run
