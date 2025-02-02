@@ -1,5 +1,6 @@
 @ECHO off
 
+::--------------------------------------------JUST REQUESTING ADMIN PRIVILIGES--------------------------------------------
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 if '%errorlevel%' NEQ '0' (
     echo Requesting administrative privileges...
@@ -40,19 +41,15 @@ IF EXIST %pathToAssets% (
 	ECHO ---------------------------------------------------------------MAIN MENU---------------------------------------------------------------
 	ECHO.
 	ECHO.
-	ECHO (1) WINDOWS TWEAKS [TELEMETRY ~ ADS ~ REMOVAL OF PREINSTALLED BLOAT ~ EFFECTS ~ ANIMATIONS ~ WINDOWS UPDATE ~ COPILOT ~ RECALL]
+	ECHO (1) WINDOWS TWEAKS     [TELEMETRY ~ ADS ~ REMOVAL OF PREINSTALLED BLOAT ~ EFFECTS ~ ANIMATIONS ~ WINDOWS UPDATE ~ COPILOT ~ RECALL]
 	ECHO.
 	ECHO.
 	ECHO.
-	ECHO (2) WINDOWS UI CHANGER [OLD RIGHT-CLICK CONTEXT MENU ~ OLD VOLUME MIXER ~ ADVANCED TASKBAR SETTINGS]
+	ECHO (2) WINDOWS UI CHANGER     [OLD RIGHT-CLICK CONTEXT MENU ~ OLD VOLUME MIXER ~ ADVANCED TASKBAR SETTINGS]
 	ECHO.
 	ECHO.
 	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
+	ECHO (3) WINDOWS PREINSTALLED BLOAT UNINSTALLER     [ASKS FOR REMOVAL OF PREINSTALLED MICROSOFT'S JUNK APPS ON YOUR SYSTEM]
 	ECHO.
 	ECHO.
 	ECHO.
@@ -72,16 +69,20 @@ IF EXIST %pathToAssets% (
 	ECHO.
 	ECHO.
 	ECHO.
+	ECHO.
+	ECHO.
+	ECHO.
+	ECHO                                        TIP: USE [CTRL + MOUSE WHEEL UP] TO ZOOM IN THE CMD WINDOW
 	ECHO.
 	ECHO                                                     =========== ======= ===========
 	ECHO                                                     -    PROCEED WITH CAUTION     -
 	ECHO                                                     =========== ======= ===========
-	ECHO                                                     -           V 1.1.0           -
+	ECHO                                                     -           V 2.0.0           -
 	ECHO                                                     =========== ======= ===========
 	ECHO.
 	ECHO.
 	SET userChoice="0"
-	SET /P userChoice=ENTER YOUR CHOICE (n)-(exit): 
+	SET /P userChoice=ENTER YOUR CHOICE (number)-(exit): 
 	
 	CLS
 	ECHO %userChoice% | FIND /I "exit" > NUL && (
@@ -94,7 +95,11 @@ IF EXIST %pathToAssets% (
 		GOTO UIChangerMenu
 	)
 	ECHO %userChoice% | FIND /I "3" > NUL && (
-		ECHO Coming Soon...
+		
+		CALL ".\Assets (Don't Move, Delete or Rename)\Preinstalled Bloat Uninstaller.bat"
+		CD /D "%~dp0"
+		
+		ECHO.
 	)
 	PAUSE
 	GOTO MainMenu
@@ -113,39 +118,39 @@ IF EXIST %pathToAssets% (
 	ECHO.
 	ECHO                                                     =========== DEBLOAT ===========
 	ECHO.
-	ECHO (C) RUN PREINSTALLED BLOAT UNINSTALLER [ASKS FOR REMOVAL OF PREINSTALLED MICROSOFT'S JUNK APPS ON YOUR SYSTEM]
+	ECHO (C) DISABLE AI [COPILOT ~ RECALL]
 	ECHO.
-	ECHO (D) DISABLE AI [COPILOT ~ RECALL]
+	ECHO (D) DISABLE GAMEDVR AND BROADCASTING [GAMEDVR ~ IN-GAME CAPTURES ~ GAMEPLAY RECORDER]
 	ECHO.
-	ECHO (E) DISABLE GAMEDVR AND BROADCASTING [GAMEDVR ~ IN-GAME CAPTURES ~ GAMEPLAY RECORDER]
-	ECHO.
-	ECHO (F) DEBLOAT MICROSOFT EDGE [MICROSOFT EDGE AT STARTUP ~ MICROSOFT EDGE TRACKING ~ MICROSOFT EDGE SECURITY ~ TAB PRELOADING]
+	ECHO (E) DEBLOAT MICROSOFT EDGE [MICROSOFT EDGE AT STARTUP ~ MICROSOFT EDGE TRACKING ~ MICROSOFT EDGE SECURITY ~ TAB PRELOADING]
 	ECHO.
 	ECHO.
 	ECHO                                                     ========= PERFORMANCE =========
 	ECHO.
-	ECHO (G) DISABLE ALL VISUAL EFFECTS AND ANIMATIONS [ANIMATIONS ~ SIGN-IN SCREEN BACKGROUND ~ TRANSPARENCY]
+	ECHO (F) DISABLE ALL VISUAL EFFECTS AND ANIMATIONS [ANIMATIONS ~ SIGN-IN SCREEN BACKGROUND ~ TRANSPARENCY]
 	ECHO.
-	ECHO (H) DISABLE BACKGROUND APPS [BACKGROUND APPS]
+	ECHO (G) DISABLE BACKGROUND APPS [BACKGROUND APPS]
 	ECHO.
-	ECHO (I) SET SERVICES TO MANUAL [SET A BUNCH OF WINDOWS SERVICES TO MANUAL SO THEY RUN ONLY WHEN THEY ARE NEEDED]
+	ECHO (H) SET SERVICES TO MANUAL [SET A BUNCH OF WINDOWS SERVICES TO MANUAL SO THEY RUN ONLY WHEN THEY ARE NEEDED]
 	ECHO.
 	ECHO.
 	ECHO                                                     =========== FEATURES ==========
 	ECHO.
-	ECHO (J) ENABLE WINDOWS PHOTO VIEWER APP [ENABLES WINDOWS PHOTO VIEWER APP TO OPEN ANY IMAGE FORMAT]
+	ECHO (I) ENABLE WINDOWS PHOTO VIEWER APP [ENABLES WINDOWS PHOTO VIEWER APP TO OPEN ANY IMAGE FORMAT]
 	ECHO.
-	ECHO (K) ENABLE USEFUL FEATURES [VERBOSE MESSAGES ~ DECREASE STARTUP TIME ~ SYSTEM RESPONSIVENESS ~ NETWORK THROTTLING ~ END TASK]
+	ECHO (J) DECREASE STARTUP TIME [ELIMINATE DEAD TIME AT STARTUP ADDED BY WINDOWS]
 	ECHO.
 	ECHO.
 	ECHO                                                     ============ UPDATES ===========
 	ECHO.
-	ECHO (L) SECURITY UPDATES ONLY [DELAYS FEATURE UPDATES BY APPROXIMATELY ONE YEAR AND SECURITY UPDATES BY AROUND FOUR DAYS]
+	ECHO (K) SECURITY UPDATES ONLY [DELAYS FEATURE UPDATES BY APPROXIMATELY ONE YEAR AND SECURITY UPDATES BY AROUND FOUR DAYS]
+	ECHO.
+	ECHO.
 	ECHO.
 	ECHO.
 	ECHO.
 	SET userChoice="0"
-	SET /P userChoice=ENTER YOUR CHOICE (l)-(l, l, l)-(all)-(back): 
+	SET /P userChoice=ENTER YOUR CHOICE (letter)-(letter, letter, letter)-(all)-(back): 
 	
 	CLS
 	ECHO %userChoice% | FIND /I "all" > NUL && (
@@ -197,13 +202,6 @@ IF EXIST %pathToAssets% (
 		ECHO.
 	)
 	ECHO %userChoice% | FIND /I "C" > NUL && (
-		
-		CALL ".\Assets (Don't Move, Delete or Rename)\Preinstalled Bloat Uninstaller.bat"
-		CD /D "%~dp0"
-		
-		ECHO.
-	)
-	ECHO %userChoice% | FIND /I "D" > NUL && (
 		ECHO STARTING...
 		
 		ECHO DISABLING WINDOWS COPILOT AND WINDOWS RECALL THROUGH THE REGISTRY EDITOR...
@@ -212,7 +210,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "E" > NUL && (
+	ECHO %userChoice% | FIND /I "D" > NUL && (
 		ECHO STARTING...
 		
 		ECHO DISABLING GAMEDVR THROUGH THE REGISTRY EDITOR...
@@ -221,7 +219,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "F" > NUL && (
+	ECHO %userChoice% | FIND /I "E" > NUL && (
 		ECHO STARTING...
 		
 		ECHO SETTING MICROSOFT EDGE SERVICES TO MANUAL...
@@ -235,7 +233,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "G" > NUL && (
+	ECHO %userChoice% | FIND /I "F" > NUL && (
 		ECHO STARTING...
 		
 		ECHO DISABLING ANIMATIONS AND EFFECTS THROUGH THE REGISTRY EDITOR...
@@ -244,7 +242,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "H" > NUL && (
+	ECHO %userChoice% | FIND /I "G" > NUL && (
 		ECHO STARTING...
 		
 		ECHO DISABLING BACKGROUND APPS THROUGH THE REGISTRY EDITOR...
@@ -253,7 +251,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "I" > NUL && (
+	ECHO %userChoice% | FIND /I "H" > NUL && (
 		ECHO STARTING...
 		
 		ECHO SETTING A BUNCH OF SERVICES TO MANUAL...
@@ -263,7 +261,7 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "J" > NUL && (
+	ECHO %userChoice% | FIND /I "I" > NUL && (
 		ECHO STARTING...
 		
 		ECHO RESTORING WINDOWS PHOTO VIEWER THROUGH THE REGISTRY EDITOR...
@@ -272,16 +270,16 @@ IF EXIST %pathToAssets% (
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "K" > NUL && (
+	ECHO %userChoice% | FIND /I "J" > NUL && (
 		ECHO STARTING...
 		
-		ECHO APPLYING USEFUL FEATURES THROUGH THE REGISTRY EDITOR...
-		REG IMPORT ".\Assets (Don't Move, Delete or Rename)\Enable Useful Features.reg" > NUL
+		ECHO DECREASING STARTUP TIME THROUGH THE REGISTRY EDITOR...
+		REG IMPORT ".\Assets (Don't Move, Delete or Rename)\Decrease Startup Time.reg" > NUL
 		
 		ECHO DONE!
 		ECHO.
 	)
-	ECHO %userChoice% | FIND /I "L" > NUL && (
+	ECHO %userChoice% | FIND /I "K" > NUL && (
 		ECHO STARTING...
 		
 		ECHO SETTING SECURITY UPDATES ONLY THROUGH THE REGISTRY EDITOR...
@@ -298,21 +296,21 @@ IF EXIST %pathToAssets% (
 	ECHO --------------------------------------------------------------UI CHANGER---------------------------------------------------------------
 	ECHO.
 	ECHO.
+	ECHO                                                  ============== GLOBAL =============
+	ECHO.
+	ECHO (A) DISPLAY HIGHLY DETAILED MESSAGES [SHOW MESSAGES WITH INFO DURING STARTUP AND SHUTDOWN]
+	ECHO.
+	ECHO.
 	ECHO                                                  ============ WINDOWS 10 ===========
 	ECHO.
-	ECHO (A) ADVANCED TASKBAR SETTINGS [CHANGE SYSTEM TRAY ICONS' LOCATION AND SYSTEM TRAY WIDGETS SUCH AS VOLUME, CLOCK, NOTIFICATION CENTER]
+	ECHO (B) ADVANCED TASKBAR SETTINGS [CHANGE SYSTEM TRAY ICONS' LOCATION AND SYSTEM TRAY WIDGETS SUCH AS VOLUME, CLOCK, NOTIFICATION CENTER]
+	ECHO.
+	ECHO (C) OLD VOLUME MIXER [ENABLES THE OLD VOLUME MIXER WHEN CLICKING ON THE VOLUME ICON]
 	ECHO.
 	ECHO.
 	ECHO                                                  ============ WINDOWS 11 ===========
 	ECHO.
-	ECHO (B) OLD RIGHT-CLICK CONTEXT MENU [ENABLES THE OLD CONTEXT MENU BY DEFAULT WHEN RIGHT CLICKING ON FILE EXPLORER OR THE DESKTOP]
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
-	ECHO.
+	ECHO (D) OLD RIGHT-CLICK CONTEXT MENU [ENABLES THE OLD CONTEXT MENU BY DEFAULT WHEN RIGHT CLICKING ON FILE EXPLORER OR THE DESKTOP]
 	ECHO.
 	ECHO.
 	ECHO.
@@ -339,7 +337,7 @@ IF EXIST %pathToAssets% (
 	ECHO.
 	ECHO.
 	SET userChoice="0"
-	SET /P userChoice=ENTER YOUR CHOICE (l)-(l, l, l)-(back): 
+	SET /P userChoice=ENTER YOUR CHOICE (letter)-(letter, letter, letter)-(back): 
 	
 	CLS
 	ECHO %userChoice% | FIND /I "back" > NUL && (
@@ -348,14 +346,31 @@ IF EXIST %pathToAssets% (
 	ECHO %userChoice% | FIND /I "a" > NUL && (
 		ECHO STARTING...
 		
-		ECHO OPENING ADVANCED TASKBAR SETTINGS WINDOW...
-		EXPLORER shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}
-		ECHO TO HIDE/SHOW SYSTEM TRAY WIDGETS PRESS THE BLUE LINK LOCATED ON THE LOWER LEFT PART THAT SAYS "Turn system icons on or off".
+		ECHO ENABLING HIGHLY DETAILED MESSAGES THROUGH THE REGISTRY EDITOR...
+		REG IMPORT ".\Assets (Don't Move, Delete or Rename)\Enable Verbose Messages.reg" > NUL
 		
 		ECHO DONE!
 		ECHO.
 	)
 	ECHO %userChoice% | FIND /I "b" > NUL && (
+		ECHO STARTING...
+		
+		EXPLORER shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}
+		ECHO TO HIDE/SHOW SYSTEM TRAY WIDGETS PRESS THE BLUE LINK LOCATED ON THE LOWER LEFT PART OF THE WINDOW THAT SAYS "Turn system icons on or off".
+		
+		ECHO DONE!
+		ECHO.
+	)
+	ECHO %userChoice% | FIND /I "c" > NUL && (
+		ECHO STARTING...
+		
+		ECHO SETTING THE OLD VOLUME MIXER THROUGH THE REGISTRY EDITOR...
+		REG IMPORT ".\Assets (Don't Move, Delete or Rename)\Enable Old Volume Mixer.reg" > NUL
+		
+		ECHO DONE!
+		ECHO.
+	)
+	ECHO %userChoice% | FIND /I "d" > NUL && (
 		ECHO STARTING...
 		
 		ECHO SETTING THE OLD RIGHT-CLICK CONTEXT MENU BY DEFAULT THROUGH THE REGISTRY EDITOR...
