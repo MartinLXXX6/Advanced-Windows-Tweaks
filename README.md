@@ -11,6 +11,7 @@ UI Changer Page:
 
 # Requirements
 1. Any Windows OS
+2. Uses Windows Powershell
 
 
 # How to Run
