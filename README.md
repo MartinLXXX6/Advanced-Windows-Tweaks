@@ -10,7 +10,7 @@ UI Changer Page:
 
 
 # Requirements
-1. Any Windows OS
+1. Windows
 2. Uses Windows Powershell
 
 
