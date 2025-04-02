@@ -77,7 +77,7 @@ IF EXIST %pathToAssets% (
 	ECHO                                                     =========== ======= ===========
 	ECHO                                                     -    PROCEED WITH CAUTION     -
 	ECHO                                                     =========== ======= ===========
-	ECHO                                                     -           V 2.0.0           -
+	ECHO                                                     -           V 2.0.1           -
 	ECHO                                                     =========== ======= ===========
 	ECHO.
 	ECHO.
