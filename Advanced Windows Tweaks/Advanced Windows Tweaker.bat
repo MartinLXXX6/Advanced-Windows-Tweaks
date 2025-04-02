@@ -298,7 +298,7 @@ IF EXIST %pathToAssets% (
 	ECHO.
 	ECHO                                                  ============== GLOBAL =============
 	ECHO.
-	ECHO (A) DISPLAY HIGHLY DETAILED MESSAGES [SHOW MESSAGES WITH INFO DURING STARTUP AND SHUTDOWN]
+	ECHO (A) DISPLAY HIGHLY DETAILED MESSAGES [SHOW MESSAGES WITH INFO DURING STARTUP, SHUTDOWN AND SHOW BSOD PARAMETERS]
 	ECHO.
 	ECHO.
 	ECHO                                                  ============ WINDOWS 10 ===========
