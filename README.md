@@ -1,13 +1,15 @@
 # Overview
 Main Page:
-![Main Page](https://github.com/user-attachments/assets/4ebbd784-f6f4-4016-a331-cd20b9fb95fb)
+<img width="1490" height="1046" alt="Image" src="https://github.com/user-attachments/assets/87bfff1c-fa49-4543-a829-086044ed2bb8" />
 
-Tweaks Page:
-![Tweaks Page](https://github.com/user-attachments/assets/a9dbb4b1-7f0a-4c6e-8d56-ad646cfc324a)
+Tweaks Menu:
+<img width="1488" height="1048" alt="Image" src="https://github.com/user-attachments/assets/9a59c0be-57e8-4a80-9d64-e5bdfe5afea4" />
 
-UI Changer Page:
-![UI Changer Page](https://github.com/user-attachments/assets/3ca979db-a53d-41ac-9e11-1e3ac336b13e)
+UI Changer Menu:
+<img width="1487" height="1047" alt="Image" src="https://github.com/user-attachments/assets/88bc4c44-a794-42b6-8f7a-6b93baea2e55" />
 
+Windows Bloat Uninstaller
+<img width="1488" height="1047" alt="Image" src="https://github.com/user-attachments/assets/cf12dea9-4e73-4d7a-b198-f9348fbcf0c9" />
 
 # Requirements
 1. Windows
